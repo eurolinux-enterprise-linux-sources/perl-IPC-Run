@@ -1,6 +1,6 @@
 Name:           perl-IPC-Run
 Version:        0.84
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Perl module for interacting with child processes
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -12,6 +12,7 @@ BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(IO::Pty) >= 1.00
 BuildRequires:  perl(Test::More) >= 0.47
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
+Requires:       perl(IO::Pty) >= 1.00
 
 %description
 IPC::Run allows you run and interact with child processes using files,
@@ -59,6 +60,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/*
 
 %changelog
+* Thu Sep 13 2012 Petr Pisar <ppisar@redhat.com> - 0.89-9
+- IO::Pty is required when passing ">pty>" argument (Resolves: #856840)
+
 * Fri Jan 28 2011 Petr Pisar <ppisar@redhat.com> - 0.84-2
 - Import into RHEL-6 (bug #669403)
 
