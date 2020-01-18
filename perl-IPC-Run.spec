@@ -1,6 +1,6 @@
 Name:           perl-IPC-Run
 Version:        0.92
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Perl module for interacting with child processes
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -54,6 +54,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 0.92-2
+- Mass rebuild 2013-12-27
+
 * Fri Nov 16 2012 Petr Šabata <contyk@redhat.com> - 0.92-1
 - 0.92 bump
 - Modernize the spec
